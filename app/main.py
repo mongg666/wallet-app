@@ -9,7 +9,7 @@ from app.models import Wallet
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Всегда создаём таблицы при старте (create_all безопасен, не трогает существующие данные)
+    # Всегда создаём таблицы при старте
     await init_db()
     yield
 
